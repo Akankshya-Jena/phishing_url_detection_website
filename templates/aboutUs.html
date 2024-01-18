@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.column {
+  float: left;
+  width: 24.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 8px;
+}
+
+.about-section {
+  padding: 50px;
+  text-align: center;
+  background-color: #000;
+  color: white;
+}
+
+.container {
+  padding: 0 16px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #555;
+}
+
+.back-video{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 40%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+}
+
+@media(min-aspect-ratio: 16/9){
+    .back-video{
+    width: 100%;
+    height: auto;
+    }
+}
+    
+@media(max-aspect-ratio: 16/9){
+    .back-video{
+    width: auto;
+    height: 100%;
+    }
+}
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 60%;
+    display: block;
+  }
+}
+</style>
+</head>
+<body>
+    
+
+<div class="about-section">
+    <video autoplay loop class="back-video" muted playsinline>
+        <source src="{{ url_for('static', filename='video1.mp4')}}" type="video/mp4">
+    </video>
+  <h1>About Us </h1>
+
+  <p><h3>Our software is very handy any normal user can use it. The main aim of the app is to detect phishing website and harms the user that this is a phishing website and it can steal your valuable data. Our app is very user friendly. It is developed in such a way that any age group people can use it, you just have to enter the URL of website and it can detect whether it is a safe for you or not. We have used newly updated software which gives us long durability and we will update whenever it will require. Our aim to collect all the URLs of fake website available on one’s system and send it to government so that these websites can be blocked and no other person can fall in this trap. As the problem of Phishing is increasing day by day, the software can prove to be very useful in protecting people’s credentials. With advancement we are planning to make it as an extension so user don’t need to manually paste it in the software, instead it would automatically detect the fraudulent link and block it.</h3></p>
+</div>
+
+<h2 style="text-align:center">Our Team</h2>
+<div class="row">
+  <div class="column">
+    <div class="card">
+     <!--<img src="/w3images/team1.jpg"  style="width:70%">--> 
+      <div class="container">
+        <h2>Akankshya Jena</h2>
+        <p>jenaakanksha18@gmail.com</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <div class="container">
+        <h2>Anish Kumar</h2>
+        <p>mr.anishbhagat@outlook.com</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <div class="container">
+        <h2>Avinash Kushwaha</h2>
+        <p>avinashkushwaha123@gmail.com</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <div class="container">
+        <h2>Roushan Choure</h2>
+        <p>raushanchoure@gmail.com</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
